@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>BALIexpress</title>
-</head>
-<body>
+function App() {
+  return (
     <div class="grid-container">
         <header class="row">
             <div>
@@ -23,7 +14,7 @@
             <div class="row center">
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -43,7 +34,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -63,7 +54,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -83,7 +74,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -103,7 +94,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -123,7 +114,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -143,7 +134,7 @@
                 </div>
                 <div class="card">
                     <a href="product.html">
-                        <img class="medium" src="./images/picture1.jpg" alt="product">
+                        <img class="medium" src="./images/picture1.jpg" alt="product"/>
                     </a>
                     <div class="card-body">
                         <a href="product.html">
@@ -167,5 +158,7 @@
             Copyright by Dunja
         </footer>
     </div>
-</body>
-</html>
+  );
+}
+
+export default App;
