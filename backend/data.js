@@ -4,7 +4,7 @@ const data = {
             _id:'1',
             name:'Product 1',
             category: 'Category 1',
-            image: '/images/picture1.jpg',
+            image: "/images/picture1.jpg",
             price:70,
             countInStock:0,
             brand:'Brand 1',
