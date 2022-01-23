@@ -1,9 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js';
 
+dotenv.config();
 const app = express();
+app.use(express.json()); //za parsiranje body-ja json zahteva
+app.use(express.urlencoded({ extended: true })); //za request koji sadrzi podatke
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/baliexpress',{
     useNewUrlParser: true,
     useUnifiedTopology:true,
