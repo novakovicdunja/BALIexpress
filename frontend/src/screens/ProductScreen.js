@@ -5,6 +5,7 @@ import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
+import {FaArrowLeft} from 'react-icons/fa';
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">Go back</Link>
+          <Link to="/"><FaArrowLeft></FaArrowLeft></Link>
           <div className="row top">
             <div className="col-2">
               <img

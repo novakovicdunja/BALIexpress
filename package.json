@@ -25,6 +25,7 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.7",
+    "react-icons": "^4.3.1",
     "sweetalert2": "^11.3.10",
     "sweetalert2-react-content": "^4.2.0"
   },

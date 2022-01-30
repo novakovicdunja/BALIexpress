@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
+import {FaTrash} from 'react-icons/fa';
 export default function CartScreen(props) {
     const productId = props.match.params.id;
     const qty = props.location.search
@@ -68,7 +69,7 @@ export default function CartScreen(props) {
                       type="button"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      Delete
+                      <FaTrash></FaTrash>
                     </button>
                   </div>
                 </div>

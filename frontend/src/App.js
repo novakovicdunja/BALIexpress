@@ -10,6 +10,9 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import {FaFacebookF, FaInstagram, FaTwitter, FaShoppingCart} from 'react-icons/fa';
+import {GiIsland} from 'react-icons/gi';
+import { IconContext } from 'react-icons/lib';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -27,12 +30,12 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              BALIexpress
+              <GiIsland></GiIsland> BALIexpress
             </Link>
           </div>
           <div>
           <Link to="/cart">
-              Cart
+              <FaShoppingCart size="1.5em"></FaShoppingCart>
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
@@ -65,7 +68,17 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">ITEH - Dunja</footer>
+        <footer className="row center">
+
+          <IconContext.Provider className="row" value={{size:"2em", color:"white"}}>
+            <a href="https://www.facebook.com" target="_blank"><FaFacebookF></FaFacebookF></a>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <a href="https://www.instagram.com" target="_blank"><FaInstagram></FaInstagram></a>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <a href="https://www.twitter.com" target="_blank"><FaTwitter></FaTwitter></a>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          </IconContext.Provider>
+        </footer>
       </div>
     </BrowserRouter>
   );
