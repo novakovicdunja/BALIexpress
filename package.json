@@ -24,7 +24,9 @@
     "express": "^4.17.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.7"
+    "mongoose": "^5.10.7",
+    "sweetalert2": "^11.3.10",
+    "sweetalert2-react-content": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
