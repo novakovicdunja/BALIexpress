@@ -14,7 +14,9 @@ export default function RegisterScreen(props) {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const redirect = props.location.search?props.location.search.split('=')[1]:'/';
+  const redirect = props.location.search
+    ? props.location.search.split('=')[1]
+    : '/';
 
   const userRegister = useSelector((state) => state.userRegister);
   const { userInfo, loading, error } = userRegister;
@@ -24,10 +26,10 @@ export default function RegisterScreen(props) {
     e.preventDefault();
     if (password !== confirmPassword) {
       MySwal.fire({
-          icon:'error',
-          title: 'Error message',
-          text: 'Password mismatch'
-      });
+        icon:'error',
+        title: 'Error message',
+        text: 'Password mismatch'
+    });
     } else {
       dispatch(register(name, email, password));
     }
