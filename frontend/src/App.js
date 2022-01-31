@@ -1,15 +1,15 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import HomeScreen from './screens/HomeScreen';
-import ProductScreen from './screens/ProductScreen';
-import CartScreen from './screens/CartScreen';
-import SignInScreen from './screens/SignInScreen';
 import { signout } from './actions/userActions';
-import RegisterScreen from './screens/RegisterScreen';
-import ShippingAddressScreen from './screens/ShippingAddressScreen';
+import CartScreen from './screens/CartScreen';
+import HomeScreen from './screens/HomeScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import ProductScreen from './screens/ProductScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import ShippingAddressScreen from './screens/ShippingAddressScreen';
+import SigninScreen from './screens/SigninScreen';
 import {FaFacebookF, FaInstagram, FaTwitter, FaShoppingCart} from 'react-icons/fa';
 import {GiIsland} from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
@@ -17,13 +17,12 @@ import { IconContext } from 'react-icons/lib';
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  const userSignIn = useSelector((state) => state.userSignIn);
-  const { userInfo } = userSignIn;
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
   };
-
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -34,7 +33,7 @@ function App() {
             </Link>
           </div>
           <div>
-          <Link to="/cart">
+            <Link to="/cart">
               <FaShoppingCart size="1.5em"></FaShoppingCart>
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
@@ -61,7 +60,7 @@ function App() {
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen}></Route>
-          <Route path="/signin" component={SignInScreen}></Route>
+          <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
@@ -69,13 +68,12 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
-
           <IconContext.Provider className="row" value={{size:"2em", color:"white"}}>
-            <a href="https://www.facebook.com" target="_blank"><FaFacebookF></FaFacebookF></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><FaFacebookF></FaFacebookF></a>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <a href="https://www.instagram.com" target="_blank"><FaInstagram></FaInstagram></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><FaInstagram></FaInstagram></a>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <a href="https://www.twitter.com" target="_blank"><FaTwitter></FaTwitter></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noreferrer"><FaTwitter></FaTwitter></a>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
           </IconContext.Provider>
         </footer>

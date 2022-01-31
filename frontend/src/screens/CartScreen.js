@@ -1,31 +1,33 @@
 import React, { useEffect } from 'react';
-import {Link} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
-import {FaTrash} from 'react-icons/fa';
+
 export default function CartScreen(props) {
-    const productId = props.match.params.id;
-    const qty = props.location.search
-      ? Number(props.location.search.split('=')[1])
-      : 1;
-    const cart = useSelector((state) => state.cart);
-    const { cartItems } = cart;
-    const removeFromCartHandler = (id) => {
-      dispatch(removeFromCart(id));
-    };
-  
-    const checkoutHandler = () => {
-      props.history.push('/signin?redirect=shipping');
-    };
-    const dispatch = useDispatch();
-    useEffect(() => {
-      if (productId) {
-        dispatch(addToCart(productId, qty));
-      }
-    }, [dispatch, productId, qty]);
-    return (
-      <div className="row top">
+  const productId = props.match.params.id;
+  const qty = props.location.search
+    ? Number(props.location.search.split('=')[1])
+    : 1;
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (productId) {
+      dispatch(addToCart(productId, qty));
+    }
+  }, [dispatch, productId, qty]);
+
+  const removeFromCartHandler = (id) => {
+    // delete action
+    dispatch(removeFromCart(id));
+  };
+
+  const checkoutHandler = () => {
+    props.history.push('/signin?redirect=shipping');
+  };
+  return (
+    <div className="row top">
       <div className="col-2">
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
@@ -69,7 +71,7 @@ export default function CartScreen(props) {
                       type="button"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <FaTrash></FaTrash>
+                      Delete
                     </button>
                   </div>
                 </div>
@@ -101,5 +103,5 @@ export default function CartScreen(props) {
         </div>
       </div>
     </div>
-    );
-  }
+  );
+}
