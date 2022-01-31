@@ -10,6 +10,7 @@ import ProductScreen from './screens/ProductScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
+import OrderScreen from './screens/OrderScreen';
 import {FaFacebookF, FaInstagram, FaTwitter, FaShoppingCart} from 'react-icons/fa';
 import {GiIsland} from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
@@ -65,6 +66,7 @@ function App() {
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
+          <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
         <footer className="row center">
