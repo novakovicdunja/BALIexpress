@@ -18,8 +18,8 @@ export default function PlaceOrderScreen(props) {
   cart.itemsPrice = toPrice(
     cart.cartItems.reduce((a, c) => a + c.qty * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 100 ? toPrice(0) : toPrice(10);
-  cart.taxPrice = toPrice(0.15 * cart.itemsPrice);
+  cart.shippingPrice = cart.itemsPrice > 4000 ? toPrice(0) : toPrice(250);
+  cart.taxPrice = toPrice(0.2 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
   const dispatch = useDispatch();
   const placeOrderHandler = () => {
@@ -39,10 +39,10 @@ export default function PlaceOrderScreen(props) {
           <ul>
             <li>
               <div className="card card-body">
-                <h2>Shipping</h2>
+                <h2>Podaci o dostavi</h2>
                 <p>
-                  <strong>Name:</strong> {cart.shippingAddress.fullName} <br />
-                  <strong>Address: </strong> {cart.shippingAddress.address},
+                  <strong>Ime:</strong> {cart.shippingAddress.fullName} <br />
+                  <strong>Adresa: </strong> {cart.shippingAddress.address},
                   {cart.shippingAddress.city}, {cart.shippingAddress.postalCode}
                   ,{cart.shippingAddress.country}
                 </p>
@@ -50,15 +50,15 @@ export default function PlaceOrderScreen(props) {
             </li>
             <li>
               <div className="card card-body">
-                <h2>Payment</h2>
+                <h2>Plaćanje</h2>
                 <p>
-                  <strong>Method:</strong> {cart.paymentMethod}
+                  <strong>Način:</strong> {cart.paymentMethod}
                 </p>
               </div>
             </li>
             <li>
               <div className="card card-body">
-                <h2>Order Items</h2>
+                <h2>Naručene stavke</h2>
                 <ul>
                   {cart.cartItems.map((item) => (
                     <li key={item.product}>
@@ -77,7 +77,7 @@ export default function PlaceOrderScreen(props) {
                         </div>
 
                         <div>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x {item.price} = {item.qty * item.price} din
                         </div>
                       </div>
                     </li>
@@ -91,33 +91,33 @@ export default function PlaceOrderScreen(props) {
           <div className="card card-body">
             <ul>
               <li>
-                <h2>Order Summary</h2>
+                <h2>Pregled</h2>
               </li>
               <li>
                 <div className="row">
-                  <div>Items</div>
-                  <div>${cart.itemsPrice.toFixed(2)}</div>
+                  <div>Stavke</div>
+                  <div>{cart.itemsPrice.toFixed(2)} din</div>
                 </div>
               </li>
               <li>
                 <div className="row">
-                  <div>Shipping</div>
-                  <div>${cart.shippingPrice.toFixed(2)}</div>
+                  <div>Dostava</div>
+                  <div>{cart.shippingPrice.toFixed(2)} din</div>
                 </div>
               </li>
               <li>
                 <div className="row">
-                  <div>Tax</div>
-                  <div>${cart.taxPrice.toFixed(2)}</div>
+                  <div>PDV</div>
+                  <div>{cart.taxPrice.toFixed(2)} din</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>
-                    <strong> Order Total</strong>
+                    <strong> Ukupno</strong>
                   </div>
                   <div>
-                    <strong>${cart.totalPrice.toFixed(2)}</strong>
+                    <strong>{cart.totalPrice.toFixed(2)} din</strong>
                   </div>
                 </div>
               </li>

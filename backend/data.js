@@ -20,78 +20,112 @@ const data = {
             name:'Freddie Mewcury',
             category: 'Muske majice',
             image: "/images/picture1.jpg",
-            price:70,
+            price:1200,
             countInStock:0,
             brand:'Cat',
             rating:4.5,
             numReviews:10,
-            description:'description 1'
+            description:'May your Mercury be more Freddie and less retrograde!'
         },
         {
-            name:'Izadji mi iz aure',
+            name:'Izađi mi iz aure',
             category: 'Zenske majice',
             image: '/images/picture2.jpg',
-            price:90,
+            price:1190,
             countInStock:10,
             brand:'Mackovic',
             rating:4.2,
             numReviews:15,
-            description:'description 2'
+            description:'Može socijalno distanciranje, može i dva metra razmaka, ali je efektivnije reći: Izađi mi iz aure!'
         },
         {
-            name:'Sve grebem',
+            name:'Izvodim besne gliste',
             category: 'Unisex majice',
             image: '/images/picture3.jpg',
-            price:40,
+            price:1400,
             countInStock:25,
             brand:'Cat',
             rating:4,
             numReviews:20,
-            description:'description 3'
+            description:'Milisav izvodi besne gliste barem dva puta dnevno :)'
         },
         {
-            name:'JU NAOPAKO majica',
+            name:'Ju naopako',
             category: 'Muske majice',
             image: '/images/picture4.jpg',
-            price:100,
+            price:1299,
             countInStock:100,
             brand:'Mackovic',
             rating:4.5,
             numReviews:10,
-            description:'description 4'
+            description:'Ju, naopako!'
         },
         {
-            name:'PUKO MI FILM majica',
+            name:'Puko mi film',
             category: 'Zenske majice',
             image: '/images/picture5.jpg',
-            price:120,
+            price:1699,
             countInStock:65,
             brand:'Cat',
             rating:4.8,
             numReviews:30,
-            description:'description 5'
+            description:'Milisavu retko pukne film, samo kad je zdravo gladan.'
         },
         {
-            name:'Pun mi kufer majica',
+            name:'Pun mi kufer',
             category: 'Unisex majice',
             image: '/images/picture6.jpg',
-            price:70,
+            price:1499,
             countInStock:0,
             brand:'Mackovic',
             rating:4.3,
             numReviews:9,
-            description:'description 6'
+            description:'Sofisticiran način da izrazite nezadovoljstvo: Pun mi kufer!'
         },
         {
-            name:'BECKA MUSTRA majica',
+            name:'Bečka mustra',
             category: 'Unisex majice',
             image: '/images/picture7.jpg',
-            price:10,
+            price:1299,
             countInStock:3,
             brand:'Cat',
             rating:4.3,
             numReviews:15,
             description:'Da li vam je skoro neko rekao da ste prava mustra bečka?'
+        },
+        {
+            name:'Hvatam zjale',
+            category: 'Unisex majice',
+            image: '/images/picture8.jpg',
+            price:1000,
+            countInStock:5,
+            brand:'Cat',
+            rating:4.9,
+            numReviews:115,
+            description:'Zjale - mistična stvorenja koja se hvataju u dokolici.'
+        },
+        {
+            name:'Hedonizam jača organizam',
+            category: 'Unisex majice',
+            image: '/images/picture9.jpg',
+            price:1399,
+            countInStock:6,
+            brand:'Mackovic',
+            rating:4.8,
+            numReviews:125,
+            description:'Hedonizam jača organizam.'
+        }
+        ,
+        {
+            name:'Ptičica',
+            category: 'Zenske majice',
+            image: '/images/picture10.jpg',
+            price:1299,
+            countInStock:10,
+            brand:'Mackovic',
+            rating:4.6,
+            numReviews:15,
+            description:'Milisav fotograf, povoljno slika mačeće rođendane i ispraćaje u savršene domove.'
         }
     ]
 }

@@ -48,13 +48,13 @@ function App() {
                 <ul className="dropdown-content">
                   <li>
                     <Link to="#signout" onClick={signoutHandler}>
-                      Sign Out
+                      Odjavi se
                     </Link>
                   </li>
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <Link to="/signin">Prijavi se</Link>
             )}
           </div>
         </header>

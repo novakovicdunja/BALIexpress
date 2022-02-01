@@ -49,9 +49,9 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Price : ${product.price}</li>
+                <li>Cena : {product.price} din</li>
                 <li>
-                  Description:
+                  Opis:
                   <p>{product.description}</p>
                 </li>
               </ul>
@@ -61,18 +61,18 @@ export default function ProductScreen(props) {
                 <ul>
                   <li>
                     <div className="row">
-                      <div>Price</div>
-                      <div className="price">${product.price}</div>
+                      <div>Cena</div>
+                      <div className="price">{product.price} din</div>
                     </div>
                   </li>
                   <li>
                     <div className="row">
-                      <div>Status</div>
+                      <div>Dostupno</div>
                       <div>
                         {product.countInStock > 0 ? (
-                          <span className="success">In stock</span>
+                          <span className="success">Na stanju</span>
                         ) : (
-                          <span className="danger">Unavailable</span>
+                          <span className="danger">Nedostupno</span>
                         )}
                       </div>
                     </div>
@@ -81,7 +81,7 @@ export default function ProductScreen(props) {
                     <>
                       <li>
                         <div className="row">
-                          <div>Qty</div>
+                          <div>Količina</div>
                           <div>
                             <select
                               value={qty}
@@ -103,7 +103,7 @@ export default function ProductScreen(props) {
                           onClick={addToCartHandler}
                           className="primary block"
                         >
-                          Add to Cart
+                          Dodaj u korpu
                         </button>
                       </li>
                     </>

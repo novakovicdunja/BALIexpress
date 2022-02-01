@@ -96,8 +96,8 @@ export default function RegisterScreen(props) {
         <div>
           <label />
           <div>
-            Already have an account?{' '}
-            <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+            Već imaš nalog?{' '}
+            <Link to={`/signin?redirect=${redirect}`}>Prijavi se</Link>
           </div>
         </div>
       </form>

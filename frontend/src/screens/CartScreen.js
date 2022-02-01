@@ -20,7 +20,6 @@ export default function CartScreen(props) {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    // delete action
     dispatch(removeFromCart(id));
   };
 
@@ -30,10 +29,10 @@ export default function CartScreen(props) {
   return (
     <div className="row top">
       <div className="col-2">
-        <h1>Shopping Cart</h1>
+        <h1>Vaša korpa</h1>
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart is empty. <Link to="/">Go Shopping</Link>
+            Korpa je prazna. <Link to="/">Vratite se na kupovinu</Link>
           </MessageBox>
         ) : (
           <ul>
@@ -66,7 +65,7 @@ export default function CartScreen(props) {
                       ))}
                     </select>
                   </div>
-                  <div>${item.price}</div>
+                  <div>{item.price} din</div>
                   <div>
                     <button
                       type="button"
@@ -86,8 +85,8 @@ export default function CartScreen(props) {
           <ul>
             <li>
               <h2>
-                Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
-                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                Ukupno ({cartItems.reduce((a, c) => a + c.qty, 0)} stavke) : 
+                {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} din
               </h2>
             </li>
             <li>
@@ -97,7 +96,7 @@ export default function CartScreen(props) {
                 className="primary block"
                 disabled={cartItems.length === 0}
               >
-                Proceed to Checkout
+                Idi na naplatu
               </button>
             </li>
           </ul>

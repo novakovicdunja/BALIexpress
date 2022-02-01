@@ -5,6 +5,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import Slider from '../components/slidercomponents/Slider';
 
 export default function HomeScreen() {
   const dispatch = useDispatch();
@@ -21,11 +22,14 @@ export default function HomeScreen() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
+        <>
+        <Slider></Slider>
         <div className="row center">
           {products.map((product) => (
             <Product key={product._id} product={product}></Product>
           ))}
         </div>
+        </>
       )}
     </div>
   );
